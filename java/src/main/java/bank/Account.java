@@ -16,4 +16,9 @@ public class Account {
         this.balance = this.balance.minus(amount);
     }
 
+    public void transferFrom(Account srcAccount, Money amount) {
+        deposit(amount);
+        srcAccount.withdraw(amount);
+    }
+
 }
